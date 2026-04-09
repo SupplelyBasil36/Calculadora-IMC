@@ -5,14 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="18dp"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtTitulo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="CALCULADORA IMC"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +25,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Peso en kilogramos:"
+        android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@id/edtPesoKG"
+        app:layout_constraintEnd_toStartOf="@id/edtPesoKG"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edtPesoKG" />
 
@@ -31,11 +36,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:inputType="numberDecimal"
+        android:layout_marginEnd="20dp"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLines="1"
         android:padding="0dp"
-        app:layout_constraintEnd_toEndOf="@id/txtTitulo"
-        app:layout_constraintStart_toStartOf="@id/txtTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtPesoKG"
         app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
 
     <TextView
@@ -43,6 +49,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Altura en metros:"
+        android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@id/edtAlturaM"
         app:layout_constraintEnd_toStartOf="@id/edtAlturaM"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,16 +59,20 @@
         android:id="@+id/edtAlturaM"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLines="1"
         android:padding="0dp"
-        app:layout_constraintEnd_toEndOf="@id/edtPesoKG"
-        app:layout_constraintStart_toStartOf="@id/edtPesoKG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtAlturaM"
         app:layout_constraintTop_toBottomOf="@id/edtPesoKG" />
 
     <Button
         android:id="@+id/btnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Calcular IMC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +82,7 @@
         android:id="@+id/txtResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Tu IMC aparecerá aquí"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
