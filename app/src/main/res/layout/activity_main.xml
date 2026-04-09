@@ -13,39 +13,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CALCULADORA IMC"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtPesoKG"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Peso en kilogramos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+        app:layout_constraintBottom_toBottomOf="@+id/edtPesoKG"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edtPesoKG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/txtPesoKG"
-        app:layout_constraintTop_toTopOf="@id/txtPesoKG" />
+        app:layout_constraintEnd_toEndOf="@id/txtTitulo"
+        app:layout_constraintStart_toStartOf="@id/txtTitulo"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
 
     <TextView
         android:id="@+id/txtAlturaM"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Altura en metros"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtPesoKG" />
+        app:layout_constraintBottom_toBottomOf="@id/edtAlturaM"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edtAlturaM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/txtAlturaM"
-        app:layout_constraintTop_toTopOf="@id/txtAlturaM" />
+        app:layout_constraintStart_toStartOf="@id/edtPesoKG"
+        app:layout_constraintTop_toBottomOf="@id/edtPesoKG" />
 
     <Button
         android:id="@+id/btnCalcular"
@@ -54,7 +56,7 @@
         android:text="Calcular IMC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtAlturaM" />
+        app:layout_constraintTop_toBottomOf="@id/edtAlturaM" />
 
     <TextView
         android:id="@+id/txtResultado"
