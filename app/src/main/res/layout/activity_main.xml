@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="18dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -19,33 +19,42 @@
 
     <TextView
         android:id="@+id/txtPesoKG"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Peso en kilogramos"
-        app:layout_constraintBottom_toBottomOf="@+id/edtPesoKG"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="Peso en kilogramos:"
+        app:layout_constraintBaseline_toBaselineOf="@id/edtPesoKG"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtPesoKG" />
 
     <EditText
         android:id="@+id/edtPesoKG"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="numberDecimal"
+        android:padding="0dp"
         app:layout_constraintEnd_toEndOf="@id/txtTitulo"
         app:layout_constraintStart_toStartOf="@id/txtTitulo"
         app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
 
     <TextView
         android:id="@+id/txtAlturaM"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Altura en metros"
-        app:layout_constraintBottom_toBottomOf="@id/edtAlturaM"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="Altura en metros:"
+        app:layout_constraintBaseline_toBaselineOf="@id/edtAlturaM"
+        app:layout_constraintEnd_toStartOf="@id/edtAlturaM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edtAlturaM" />
 
     <EditText
         android:id="@+id/edtAlturaM"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="@id/edtPesoKG"
         app:layout_constraintStart_toStartOf="@id/edtPesoKG"
         app:layout_constraintTop_toBottomOf="@id/edtPesoKG" />
 
