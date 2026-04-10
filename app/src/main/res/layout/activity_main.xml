@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="CALCULADORA IMC"
         android:textAlignment="center"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +22,9 @@
 
     <TextView
         android:id="@+id/txtPesoKG"
-        android:layout_width="0dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:text="Peso en kilogramos:"
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@id/edtPesoKG"
@@ -34,20 +35,20 @@
     <EditText
         android:id="@+id/edtPesoKG"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
+        android:gravity="center"
         android:inputType="numberDecimal|numberSigned"
         android:maxLines="1"
-        android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/txtPesoKG"
         app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
 
     <TextView
         android:id="@+id/txtAlturaM"
-        android:layout_width="0dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:text="Altura en metros:"
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@id/edtAlturaM"
@@ -58,12 +59,11 @@
     <EditText
         android:id="@+id/edtAlturaM"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="20dp"
+        android:gravity="center"
         android:inputType="numberDecimal|numberSigned"
         android:maxLines="1"
-        android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/txtAlturaM"
         app:layout_constraintTop_toBottomOf="@id/edtPesoKG" />
